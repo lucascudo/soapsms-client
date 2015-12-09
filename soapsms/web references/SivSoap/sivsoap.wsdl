@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:sivsoap" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:sivsoap" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:sivsoap">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="sendmailRequest">
+    <wsdl:part name="mailTo" type="xsd:string" />
+    <wsdl:part name="mailFrom" type="xsd:string" />
+    <wsdl:part name="subject" type="xsd:string" />
+    <wsdl:part name="text" type="xsd:string" />
+    <wsdl:part name="mailFromName" type="xsd:string" />
+    <wsdl:part name="SMTPServer" type="xsd:string" />
+    <wsdl:part name="SMTPPort" type="xsd:integer" />
+    <wsdl:part name="IsHTML" type="xsd:boolean" />
+    <wsdl:part name="SMTPAuth" type="xsd:boolean" />
+    <wsdl:part name="Username" type="xsd:string" />
+    <wsdl:part name="Password" type="xsd:string" />
+    <wsdl:part name="SMTPSecure" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendmailResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendsmsRequest">
+    <wsdl:part name="phone" type="xsd:string" />
+    <wsdl:part name="text" type="xsd:string" />
+    <wsdl:part name="nmliente" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendsmsResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="sivsoapPortType">
+    <wsdl:operation name="sendmail">
+      <documentation>Envia um eMail</documentation>
+      <wsdl:input message="tns:sendmailRequest" />
+      <wsdl:output message="tns:sendmailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendsms">
+      <documentation>Envia um SMS</documentation>
+      <wsdl:input message="tns:sendsmsRequest" />
+      <wsdl:output message="tns:sendsmsResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="sivsoapBinding" type="tns:sivsoapPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="sendmail">
+      <soap:operation soapAction="urn:sivsoap#sendmail" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:sivsoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:sivsoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendsms">
+      <soap:operation soapAction="urn:sivsoap#sendsms" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:sivsoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:sivsoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="sivsoap">
+    <wsdl:port name="sivsoapPort" binding="tns:sivsoapBinding">
+      <soap:address location="http://www.sivng.com.br/soap/core/sivsoap.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,16 @@
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\bin\Debug\soapsms.exe.config
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\bin\Debug\soapsms.exe
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\bin\Debug\soapsms.pdb
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\bin\Debug\af\soapsms.resources.dll
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\bin\Debug\pt-BR\soapsms.resources.dll
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\obj\x86\Debug\soapsms.Form1.resources
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\obj\x86\Debug\soapsms.Properties.Resources.resources
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\obj\x86\Debug\soapsms.Form1.af.resources
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\obj\x86\Debug\soapsms.Form1.pt-BR.resources
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\obj\x86\Debug\af\soapsms.resources.dll
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\obj\x86\Debug\pt-BR\soapsms.resources.dll
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\obj\x86\Debug\soapsms.exe
+C:\Documents and Settings\lucas\meus documentos\visual studio 2010\Projects\soapsms\soapsms\obj\x86\Debug\soapsms.pdb
